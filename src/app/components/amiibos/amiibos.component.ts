@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 interface Member {
   name: string;
@@ -8,7 +8,8 @@ interface Member {
 @Component({
   selector: 'app-amiibos',
   templateUrl: './amiibos.component.html',
-  styleUrls: ['./amiibos.component.css']
+  styleUrls: ['./amiibos.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AmiibosComponent {
   members: Member[] = [

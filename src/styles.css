@@ -100,3 +100,83 @@ body {
         width: 100% !important;
     }
 }
+
+/* Smooth scroll and section animations */
+html {
+    scroll-behavior: smooth;
+}
+
+.site-section {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: sectionFade 600ms ease forwards;
+    will-change: opacity, transform;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-1 { animation-delay: 0.08s; }
+.section-2 { animation-delay: 0.22s; }
+.section-3 { animation-delay: 0.36s; }
+.section-4 { animation-delay: 0.5s; }
+.section-5 { animation-delay: 0.64s; }
+
+@keyframes sectionFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar enhancements */
+#navbar.sticky-top {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    z-index: 1040;
+}
+
+/* Brand logo adjustments */
+#navbar .navbar-brand img {
+    max-height: 48px;
+    width: auto;
+    transition: transform 0.25s ease;
+}
+#navbar .navbar-brand img:hover {
+    transform: scale(1.03);
+}
+
+/* Small spacing so content is not hidden behind sticky nav on small screens */
+@media (max-width: 576px) {
+    main { padding-top: 0.5rem; }
+}
+
+/* Footer improvements: make it wider, taller and more readable */
+#footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #fff;
+}
+
+/* Center content and allow it to scale nicely */
+#footer .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#footer p {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+#footer .btn {
+    min-height: 56px;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #footer .footer-inner {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}

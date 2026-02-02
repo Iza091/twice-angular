@@ -5,7 +5,8 @@
         </div>
          
         <div class="row">
-            <div class="col-sm" *ngFor="let album of albums">
+            @for (album of albums; track album.title) {
+            <div class="col-sm">
                 <div class="card w-100 card-border mb-5">
                     <img [src]="album.image" class="card-img-top" [alt]="album.title">
                     <div class="card-body">
@@ -14,6 +15,7 @@
                     </div>
                 </div>
             </div>
+            }
         </div>
     </div>
 </div>

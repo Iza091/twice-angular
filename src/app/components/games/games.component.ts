@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
-
-interface Album {
-  image: string;
-  title: string;
-  description: string;
-}
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-games',
-  templateUrl: './games.html',
-  styleUrls: ['./games.css']
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './games.component.html',
+  styleUrl: './games.component.css'
 })
 export class GamesComponent {
-  albums: Album[] = [
+  albums = [
     { 
       image: 'assets/img/card1.png', 
       title: 'Cry For Me',
@@ -26,7 +23,7 @@ export class GamesComponent {
     { 
       image: 'assets/img/card3.png', 
       title: 'Twicecoaster: Lane 1',
-      description: 'Twicecoaster: Lane 1 (estilizado como TWICEcoaster: LANE 1) es la tercera obra extendida (EP) del grupo de chicas surcoreanas Twice. El EP fue lanzado digital y físicamente el 24 de octubre de 2016 por JYP Entertainment.'
+      description: 'Twicecoaster: Lane 1 (estilizado como TWICEcoaster: LANE 1) es la tercera obra extendida (EP) del grupo de chicas surcoreanas Twice. El EP fue lanzado digital y físicamente el 24 de octubre de 2016 por JYP Entertainment y distribuido por KT Music.'
     }
   ];
 }
