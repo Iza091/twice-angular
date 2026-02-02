@@ -1,16 +1,68 @@
 # TwiceAngular
 
+
+<p align="center">
+  <a href="https://angular.dev/" target="blank"><img src="./public/angular_gradient.png" width="120" alt="Angular Logo" /></a>
+</p>
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+
+
+
+
+## Prerequisites
+
+Before running this project locally, make sure you have the following installed:
+
+- **Node.js** (LTS) — recommended: Node 18 or 20. Check with:
+
+```bash
+node --version
+```
+
+- **npm** (comes with Node). Check with:
+
+```bash
+npm --version
+```
+
+- **Angular CLI** (optional but recommended globally):
+
+```bash
+npm install -g @angular/cli
+# or verify with:
+ng version
+# If you don't want a global install you can use npx:
+# npx -p @angular/cli ng version
+```
+
+> Tip: Use a version manager (nvm / nvm-windows) if you need to switch Node versions safely.
 
 ## Development server
 
-To start a local development server, run:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 ng serve
+# or, if you don't have the CLI globally installed:
+# npx ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+3. Open your browser and navigate to:
+
+```
+http://localhost:4200/
+```
+
+The application will automatically reload whenever you modify any of the source files.
+
+If you encounter `ng: command not found`, either install the Angular CLI globally (`npm install -g @angular/cli`) or use `npx ng serve` to run it without installing globally.
 
 ## Code scaffolding
 
