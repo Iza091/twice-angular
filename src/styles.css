@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Bitter', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.card-border {
+    border: 3px solid #ffc107;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.amiibo {
+    transition: transform 0.3s ease;
+}
+
+.amiibo:hover {
+    transform: scale(1.05);
+}
+
+.amiibo-name {
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.amiibo-name:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+#ribbon {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 50px 0;
+    margin-top: -1px;
+}
+
+#separator-ribbon .content {
+    height: 20px;
+    background: #ffc107;
+}
+
+#games {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 50px 0;
+}
+
+#separator-amiibos .content {
+    height: 20px;
+    background: #198754;
+}
+
+#amiibos {
+    background: linear-gradient(to right, #198754, #20c997);
+    padding-top: 50px;
+}
+
+#play {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+#play .card {
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+#play .card:hover {
+    transform: translateY(-5px);
+}
+
+#footer {
+    background: linear-gradient(to right, #1a1a2e, #16213e, #0f3460);
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    #ribbon .container {
+        width: 100% !important;
+    }
+}
